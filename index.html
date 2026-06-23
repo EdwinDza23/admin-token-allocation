@@ -2157,7 +2157,7 @@
             </div>-->
               <div>
                 <div class="model-card-label">GPT-4o</div>
-                <div class="model-card-sub">OpenAI · ₹0.02 / token</div>
+                <div class="model-card-sub">OpenAI · $0.02 / token</div>
               </div>
             </div>
             <label class="m3-switch">
@@ -2177,7 +2177,7 @@
               </div>
               <div class="field-group">
                 <div class="field-label">Budget</div>
-                <input type="text" class="field-input" value="₹4,000" id="gpt4o-budget"
+                <input type="text" class="field-input" value="$4,000" id="gpt4o-budget"
                   oninput="calcTokens('gpt4o', 0.02)" onfocus="clearBudgetOnFocus('gpt4o')"
                   onblur="formatBudgetOnBlur('gpt4o', 0.02)" />
                 <div class="field-hint">auto-calculated</div>
@@ -2198,8 +2198,10 @@
         <!-- Claude -->
         <div class="model-card" id="mc-claude">
           <div class="model-card-head">
+            <div class="model-head-left">
+              <div>
                 <div class="model-card-label">Claude</div>
-                <div class="model-card-sub">Anthropic · ₹0.015 / token</div>
+                <div class="model-card-sub">Anthropic · $0.015 / token</div>
               </div>
             </div>
             <label class="m3-switch">
@@ -2219,7 +2221,7 @@
               </div>
               <div class="field-group">
                 <div class="field-label">Budget</div>
-                <input type="text" class="field-input" value="₹1,500" id="claude-budget"
+                <input type="text" class="field-input" value="$1,500" id="claude-budget"
                   oninput="calcTokens('claude', 0.015)" onfocus="clearBudgetOnFocus('claude')"
                   onblur="formatBudgetOnBlur('claude', 0.015)" />
                 <div class="field-hint">auto-calculated</div>
@@ -2246,7 +2248,7 @@
             </div>-->
               <div>
                 <div class="model-card-label">Gemini</div>
-                <div class="model-card-sub">Google · ₹0.008 / token</div>
+                <div class="model-card-sub">Google · $0.008 / token</div>
               </div>
             </div>
             <label class="m3-switch">
@@ -2266,7 +2268,7 @@
               </div>
               <div class="field-group">
                 <div class="field-label">Budget</div>
-                <input type="text" class="field-input" value="₹0" id="gemini-budget"
+                <input type="text" class="field-input" value="$0" id="gemini-budget"
                   oninput="calcTokens('gemini', 0.008)" onfocus="clearBudgetOnFocus('gemini')"
                   onblur="formatBudgetOnBlur('gemini', 0.008)" />
                 <div class="field-hint">auto-calculated</div>
@@ -2360,7 +2362,7 @@
           <div class="ud-alloc-left">
             <div>
               <div class="ud-model-name">GPT-4o</div>
-              <div class="ud-model-provider">OpenAI · ₹0.02 / token</div>
+              <div class="ud-model-provider">OpenAI · $0.02 / token</div>
             </div>
           </div>
           <label class="m3-switch">
@@ -2380,7 +2382,7 @@
             </div>
             <div class="field-group">
               <div class="field-label">Budget</div>
-              <input type="text" class="field-input" value="₹200" id="u-gpt4o-budget"
+              <input type="text" class="field-input" value="$200" id="u-gpt4o-budget"
                 oninput="calcUTokens('gpt4o',0.02)" onfocus="clearUBudgetFocus('gpt4o')"
                 onblur="formatUBudgetBlur('gpt4o',0.02)" />
               <div class="field-hint">auto-calculated</div>
@@ -2403,7 +2405,7 @@
             
             <div>
               <div class="ud-model-name">Claude</div>
-              <div class="ud-model-provider">Anthropic · ₹0.015 / token</div>
+              <div class="ud-model-provider">Anthropic · $0.015 / token</div>
             </div>
           </div>
           <label class="m3-switch">
@@ -2423,7 +2425,7 @@
             </div>
             <div class="field-group">
               <div class="field-label">Budget</div>
-              <input type="text" class="field-input" value="₹75" id="u-claude-budget"
+              <input type="text" class="field-input" value="$75" id="u-claude-budget"
                 oninput="calcUTokens('claude',0.015)" onfocus="clearUBudgetFocus('claude')"
                 onblur="formatUBudgetBlur('claude',0.015)" />
               <div class="field-hint">auto-calculated</div>
@@ -2447,7 +2449,7 @@
             
             <div>
               <div class="ud-model-name">Gemini</div>
-              <div class="ud-model-provider">Google · ₹0.008 / token</div>
+              <div class="ud-model-provider">Google · $0.008 / token</div>
             </div>
           </div>
           <label class="m3-switch">
@@ -2467,7 +2469,7 @@
             </div>
             <div class="field-group">
               <div class="field-label">Budget</div>
-              <input type="text" class="field-input" value="₹0" id="u-gemini-budget"
+              <input type="text" class="field-input" value="$0" id="u-gemini-budget"
                 oninput="calcUTokens('gemini',0.008)" onfocus="clearUBudgetFocus('gemini')"
                 onblur="formatUBudgetBlur('gemini',0.008)" />
               <div class="field-hint">auto-calculated</div>
@@ -2554,7 +2556,7 @@
     function calcBudget(model, rate) {
       const tokens = parseInt(document.getElementById(model + '-tokens').value) || 0;
       const budget = (tokens * rate).toLocaleString('en-IN', { maximumFractionDigits: 0 });
-      document.getElementById(model + '-budget').value = '₹' + budget;
+      document.getElementById(model + '-budget').value = '$' + budget;
     }
 
     function calcTokens(model, rate) {
@@ -2573,7 +2575,7 @@
     function formatBudgetOnBlur(model, rate) {
       const budgetInput = document.getElementById(model + '-budget');
       const cleanVal = parseFloat(budgetInput.value.replace(/[^0-9.]/g, '')) || 0;
-      budgetInput.value = '₹' + cleanVal.toLocaleString('en-IN', { maximumFractionDigits: 0 });
+      budgetInput.value = '$' + cleanVal.toLocaleString('en-US', { maximumFractionDigits: 0 });
     }
 
     function saveDeptConfig() {
@@ -2586,7 +2588,7 @@
     function calcUBudget(model, rate) {
       const tokens = parseInt(document.getElementById('u-' + model + '-tokens').value) || 0;
       const budget = (tokens * rate).toLocaleString('en-IN', { maximumFractionDigits: 0 });
-      document.getElementById('u-' + model + '-budget').value = '₹' + budget;
+      document.getElementById('u-' + model + '-budget').value = '$' + budget;
     }
     function calcUTokens(model, rate) {
       const budgetInput = document.getElementById('u-' + model + '-budget');
@@ -2601,7 +2603,7 @@
     function formatUBudgetBlur(model, rate) {
       const el = document.getElementById('u-' + model + '-budget');
       const v = parseFloat(el.value.replace(/[^0-9.]/g, '')) || 0;
-      el.value = '₹' + v.toLocaleString('en-IN', { maximumFractionDigits: 0 });
+      el.value = '$' + v.toLocaleString('en-US', { maximumFractionDigits: 0 });
     }
 
     let activeUserRow = null;
